@@ -8,6 +8,8 @@
 - ~~Ключ не должен передаваться в открытом виде. Используйте для шифрования ключа ansible-vault.~~
    -  ~~Ключ можете сгенерировать, используя SSH-keygen.~~
 
-* [ ] - :two:  **Создайте плейбук, который устанавливает, либо удаляет почтовый сервер postfix в зависимости от тега:**   
-- *При запуске ansible-playbook <путь_к_плейбуку> --tags "init postfix" должен устанавливаться и запускаться с конфигурацией по умолчанию.*
-  - *При запуске ansible-playbook <путь_к_плейбуку> --tags drop postfix должен удаляться с машины.*  
+* [X] - :two:  ~~**Создайте плейбук, который устанавливает, либо удаляет почтовый сервер postfix в зависимости от тега:**~~   
+- ~~*При запуске ansible-playbook <путь_к_плейбуку> --tags "init postfix" должен устанавливаться и запускаться с конфигурацией по умолчанию.*~~
+  - ~~*При запуске ansible-playbook <путь_к_плейбуку> --tags drop postfix должен удаляться с машины.*~~  
+> Done according tasks.
+![image](https://db3pap003files.storage.live.com/y4mIR87UuBA6Rw0nfZY7JBtddLnZD3BxiFCh8GAFvKZsh2MNCMXrUsjFK4LYeJZRzIt2uoMcP7CnGtwoUgmW4WXsR22cvTrHdyQJbvQWc2QwZ2aY2fmJG_uoyCxTYeVeQ1ysBv3zpzYoE-2cChe4_GeHPuBqpbyTZWNU8-erWun1I4F4cWKDqwDUTLTVywm-rb88WT8MZ30uPXrtpzCxhXR8g/Ansible_Postfix_Tags.jpg?psid=1&width=1362&height=557)
