@@ -30,11 +30,12 @@ function ansiblePlaybook {
         [Parameter(Mandatory=$False)]
         [String]$privateKey = "~/.ssh/morsh_bastion_SSH",
         [Parameter(Mandatory=$False)]
-        [String]$Playbook = "./provisioning_web_admin.yaml"
+        [String]$Playbook = "./provisioning_web_admin.yaml",
+        [Parameter(Mandatory=$False,Position=0)]
+        [string]$fileSecrets = '~/.vault_pass'
     )
-    wsl -d $distr -u $user -e ansible-playbook  -i "$invFile" --private-key $privateKey  $Playbook 
+    wsl -d $distr -u $user -e ansible-playbook  -i "$invFile" --private-key $privateKey -e '@secrets' --vault-password-file=$fileSecrets  $Playbook 
 } 
-
 
 Set-Alias ansible-vault ansibleVault
 function ansibleVault {
