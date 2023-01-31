@@ -44,7 +44,17 @@ function ansibleVault {
         [Parameter(Mandatory=$False)]
         [String]$user = "morsh92",
         [Parameter(Mandatory=$False,Position=0)]
-        [String]$args
+        [String]$action = 'encrypt',
+        [Parameter(Mandatory=$False,Position=0)]
+        [String]$file = 'provisioning_web_admin.yaml',
+        [Parameter(Mandatory=$False,Position=0)]
+        [switch]$ask,
+        [Parameter(Mandatory=$False,Position=0)]
+        [string]$fileSecrets = './.vault_pass'
+
     )
-    wsl -d $distr -u $user -e ansible-vault $args
+    
+    if($ask){$passwd = "--ask-vault-pass"}
+
+    wsl -d $distr -u $user -e ansible-vault $action --vault-password-file=$fileSecrets $passwd $file
 } 
