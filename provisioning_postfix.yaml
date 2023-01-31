@@ -1,0 +1,45 @@
+- hosts: lemp
+  connection: ssh
+  become: true
+  gather_facts: false
+  vars:
+   domain: "polar.grp"
+   networks: "127.0.0.0/8 12.34.56.0/24"
+   relay_domains: ""
+
+  tasks:
+
+  - name: Install postfix
+    tags: "init postfix"
+    apt:
+     update_cache: yes
+     name: postfix
+     state: latest
+
+
+
+  - name: Uninstall postfix
+    tags: "drop postfix"
+    apt:
+     update_cache: yes
+     name: postfix
+     state: absent
+
+  - name: Create main.cf file for postfix config
+    tags: "init postfix"
+    template:
+     src: postfix-main-cfg.j2   
+     dest: /etc/postfix/main.cf
+     backup: true
+     mode: '0600'
+    notify: restart_postfix
+
+
+  handlers:
+
+  - name: restart postfix service
+    tags: "init postfix"
+    listen: restart_postfix
+    service:
+      name: postfix
+      state: restarted

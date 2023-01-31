@@ -32,9 +32,16 @@ function ansiblePlaybook {
         [Parameter(Mandatory=$False)]
         [String]$Playbook = "./provisioning_web_admin.yaml",
         [Parameter(Mandatory=$False,Position=0)]
-        [string]$fileSecrets = '~/.vault_pass'
+        [string]$fileSecrets = '~/.vault_pass',
+        [Parameter(Mandatory=$False,Position=0)]
+        [switch]$tagInit,
+        [Parameter(Mandatory=$False,Position=0)]
+        [switch]$tagDrop
     )
-    wsl -d $distr -u $user -e ansible-playbook  -i "$invFile" --private-key $privateKey -e '@secrets' --vault-password-file=$fileSecrets  $Playbook 
+
+   if($tagInit){$param='--tags';$tag = "init postfix"}elseif($tagDrop){$param='--tags';$tag = "drop postfix"}
+
+    wsl -d $distr -u $user -e ansible-playbook  -i "$invFile" --private-key $privateKey -e '@secrets' --vault-password-file=$fileSecrets  $Playbook  $param $tag
 } 
 
 Set-Alias ansible-vault ansibleVault
