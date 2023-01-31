@@ -36,10 +36,10 @@
 
 
   handlers:
-
-  - name: restart postfix service
-    tags: "init postfix"
-    listen: restart_postfix
-    service:
-      name: postfix
-      state: restarted
+    
+   - name: restart postfix service
+     tags: "init postfix"
+     listen: restart_postfix
+     service:
+        name: postfix
+        state: restarted
