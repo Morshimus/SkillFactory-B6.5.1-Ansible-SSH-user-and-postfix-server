@@ -12,4 +12,4 @@
 - ~~*При запуске ansible-playbook <путь_к_плейбуку> --tags "init postfix" должен устанавливаться и запускаться с конфигурацией по умолчанию.*~~
   - ~~*При запуске ansible-playbook <путь_к_плейбуку> --tags drop postfix должен удаляться с машины.*~~  
 > Done according tasks.
-![image](https://db3pap003files.storage.live.com/y4m45FNJkAt08GQUd-iQ1jrY59Pbq_b0Kdll7sEqBZeT_k-bc9oaEIXHKCMWkaWCj-h1OYM2iI9SLWGTAqi-BDntVPUS-HT88K7QJQxUR6y_cQNVZnRG8dex0NJ9bR6JbtROtkxbWs4vIzuUCQk-TFOonWt0tVX_-STi9HWP_OCEsTvnT8nI4P6ArO-x2DbO5HKr9GxAHGoOUnjbqtlSZWCwg/Ansible_Postfix_Tags.jpg?psid=1&width=1358&height=497)
+![image](https://db3pap003files.storage.live.com/y4mIR87UuBA6Rw0nfZY7JBtddLnZD3BxiFCh8GAFvKZsh2MNCMXrUsjFK4LYeJZRzIt2uoMcP7CnGtwoUgmW4WXsR22cvTrHdyQJbvQWc2QwZ2aY2fmJG_uoyCxTYeVeQ1ysBv3zpzYoE-2cChe4_GeHPuBqpbyTZWNU8-erWun1I4F4cWKDqwDUTLTVywm-rb88WT8MZ30uPXrtpzCxhXR8g/Ansible_Postfix_Tags.jpg?psid=1&width=1362&height=557)
