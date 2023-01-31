@@ -50,7 +50,7 @@ function ansibleVault {
         [Parameter(Mandatory=$False,Position=0)]
         [switch]$ask,
         [Parameter(Mandatory=$False,Position=0)]
-        [string]$fileSecrets = './.vault_pass'
+        [string]$fileSecrets = '~/.vault_pass'
 
     )
     
