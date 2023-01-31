@@ -2,7 +2,8 @@
 
 ## Задание:
 
-* [ ] - :one:  **Напишите плейбук, который будет на удаленной системе создавать:**    
-    - *Пользователя web-adm и задавать ему SSH-ключ (создавая заданный ключ в /home/web-adm/.ssh/id_rsa.pub).* 
-      - *Ключ не должен передаваться в открытом виде. Используйте для шифрования ключа ansible-vault.* 
-        - *Ключ можете сгенерировать, используя SSH-keygen.*
+* [x] - :one:  ~~**Напишите плейбук, который будет на удаленной системе создавать:**~~    
+ >~~Пользователя web-adm и задавать ему SSH-ключ (создавая заданный ключ в /home/web-adm/.ssh/id_rsa.pub).~~ 
+ ![image](https://db3pap003files.storage.live.com/y4moj_Ws2gUk7bt88yyhFCi98D-xECS7fNQ9tbfR9MwsY-5XyqX8oz1ZP3oVV-3BbGOwjOqWfJdhy3Mb2kiS4VdN9_Y5nyUzbevZUHe5b_xXFuVtFXU7AADbbtyTkU51aesuz6fOx2kYFcXzWBShCtxUBSBoREeSrTdDmKHfr5_DU6Onw4Rnzx6s0iYl551RQe-4PPDmdKFZSgpiq3AJ2CHfg/Ansible_Create_User.jpg?psid=1&width=1347&height=740)
+- ~~Ключ не должен передаваться в открытом виде. Используйте для шифрования ключа ansible-vault.~~
+   -  ~~Ключ можете сгенерировать, используя SSH-keygen.~~
