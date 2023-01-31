@@ -1,0 +1,3 @@
+- hosts: yandex.cloud
+  connection: local
+  gather_facts: true
